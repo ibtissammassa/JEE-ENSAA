@@ -13,6 +13,7 @@
 <%
 NoteForm nf = (NoteForm)session.getAttribute("nf");
 System.out.println("in");
+float s = 0;
 Vector<Note> dataVect=null;
 if(nf!=null){
 	dataVect = nf.getLesNotes() ;
@@ -30,14 +31,17 @@ Num Inscription : <input type="text" name="num_Ins" >
     <%
     if(dataVect!=null){
     for (Note note : dataVect){
+    	s+=note.getNote();
     %>
         <tr>
             <td><%=note.getMetiere()%></td>
             <td><%=note.getNote()%></td>
         </tr>
     <%
-    System.out.println(note.getNote());
-    }}%>
+    }%>
 </table>
+<br/>
+	Moyenne : <%=s/dataVect.size()%>
+	<%}%>
 </body>
 </html>
