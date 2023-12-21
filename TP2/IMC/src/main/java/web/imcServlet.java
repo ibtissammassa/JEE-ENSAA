@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class imcServlet
  */
-@WebServlet("/imcServlet")
+
 public class imcServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
