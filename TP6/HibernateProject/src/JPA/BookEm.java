@@ -1,4 +1,4 @@
-package jpaPack;
+package JPA;
 
 import java.util.List;
 

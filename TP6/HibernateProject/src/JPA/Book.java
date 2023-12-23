@@ -1,24 +1,22 @@
-package jpaPack;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+package JPA;
+
+import javax.persistence.*;
 
 @Entity
-@Table(name = "book")
+@Table(name="book")
 public class Book {
 	@Id
 	private long book_id;
     private String title;
     private String author;
     private float price;
-    
-    public Book(long book_id, String title, String author, float price) {
-        this.book_id = book_id;
-        this.title = title;
-        this.author = author;
-        this.price = price;
-    }
-    
+ 
+	public Book(long book_id, String title, String author, float price) {
+		this.book_id = book_id;
+		this.title = title;
+		this.author = author;
+		this.price = price;
+	}
 	public long getBook_id() {
 		return book_id;
 	}

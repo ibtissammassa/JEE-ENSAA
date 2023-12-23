@@ -1,13 +1,15 @@
-package jpaPack;
+package JPA;
 
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import java.util.List;
 
+import javax.persistence.*;
+
 public class Main {
-    public static void main(String[] args) {
-        // Créez une EntityManagerFactory en utilisant l'unité de persistance "Bookstore" du persistence.xml
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("Bookstore");
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 // Créez une EntityManagerFactory en utilisant l'unité de persistance "biblio" du persistence.xml
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("biblio");
 
         // Créez un EntityManager et un BookEmImpl en utilisant l'EntityManagerFactory
         BookEm bookEm = new BookEmImpl(emf);
@@ -50,5 +52,6 @@ public class Main {
             // Fermez l'EntityManager et l'EntityManagerFactory
             emf.close();
         }
-    }
+	}
+
 }
